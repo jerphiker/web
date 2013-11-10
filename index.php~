@@ -32,10 +32,6 @@
 	exists in the users table.<br /><br />
 
 	Account creation should not be necessary to submit an illness or to navigate the site.<br />
-
-	Account information that is needed to create a new account is username, gender, birthday, 
-	password, and a recovery email.
-	Of these, only username and password should be required.
 	</p>
 </div>
 
