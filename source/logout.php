@@ -10,13 +10,23 @@ $fgmembersite->LogOut();
       <title>Login</title>
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
       <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
-</head>
-<body>
 
+    <script type="text/javascript">
+    	function delayer(){
+    		window.location = "../home.php"
+    	}
+    </script>
+</head>
+<body onload="setTimeout('delayer()',5000)">
 <h2>You have logged out</h2>
 <p>
-<a href='login.php'>Login Again</a>
+	You are being redirected to the home page.
 </p>
 
+
+<!-- <p>
+<a href='login.php'>Login Again</a>
+</p>
+ -->
 </body>
 </html>
