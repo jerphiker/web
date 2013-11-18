@@ -16,6 +16,14 @@ if(!$fgmembersite->CheckLogin())
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css">
 </head>
 <body>
+
+<?php
+	include './includes/header.php';
+
+	include './includes/menu.php';
+?>
+
+
 <div id='fg_membersite_content'>
 <h2>Home Page</h2>
 Welcome back <?= $fgmembersite->UserFullName(); ?>!

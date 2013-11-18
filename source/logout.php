@@ -13,7 +13,7 @@ $fgmembersite->LogOut();
 
     <script type="text/javascript">
     	function delayer(){
-    		window.location = "../home.php"
+    		window.location = "../index.php"
     	}
     </script>
 </head>
