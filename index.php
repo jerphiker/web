@@ -12,6 +12,11 @@
 
 	include './includes/menu.php';
 ?>
+<div id="login Area">
+	<a href="./source/login.php">Login</a><br />
+	<a href="./source/register.php">Register New User</a>
+</div>
+
 
 <div id="left_side_forms">
 	<p>
