@@ -1,0 +1,28 @@
+Info to collect:
+	cold/flu
+	location (float latitude, float longitude)
+	date (automatic)
+
+index.php
+	login functionality (forgot pw)
+	create account
+	submit status anonymously
+
+home.php
+	should be logged in to view
+	show most recent status report
+	show account name and recovery email
+	show options to change revocery email and password
+	show option to delete account
+
+menu.php
+	logged in -> show home, statuses, region
+	not logged in -> show region and index
+
+region.php
+	generic map page with data points on it, along with option to view specific time from --/--/-- to --/--/--
+	by default show last 7 days
+
+status.php
+	logged in user can submit status
+	show list of previously submitted statuses with option to delete them
