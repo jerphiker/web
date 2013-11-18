@@ -1,0 +1,6 @@
+Pending Changes ToDo
+
+Delete accountCreation.php
+Delete account.php
+Migrate home.php to Sources Directry
+Migrate statuses.php to Sources Directory
