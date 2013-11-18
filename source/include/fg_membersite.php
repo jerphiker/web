@@ -88,14 +88,21 @@ class FGMembersite
             return false;
         }
         
-        if(!$this->SendUserConfirmationEmail($formvars))
-        {
-            return false;
-        }
+        $confirmcode = $formvars['confirmcode'];
+        $confirm_url = $this->GetAbsoluteURLFolder().'/confirmreg.php?code='.$confirmcode;
 
-        $this->SendAdminIntimationEmail($formvars);
+       
+        header("Location: $confirm_url"); 
+
+
+        // if(!$this->SendUserConfirmationEmail($formvars))
+        // {
+        //     return false;
+        // }
+
+        // $this->SendAdminIntimationEmail($formvars);
         
-        return true;
+        // return true;
     }
 
     function ConfirmUser()
