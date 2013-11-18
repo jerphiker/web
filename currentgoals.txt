@@ -4,12 +4,12 @@ Info to collect:
 	date (automatic)
 
 index.php
-	login functionality (forgot pw)
-	create account
+	login functionality (forgot pw)  --- Check
+	create account  --- Check
 	submit status anonymously
 
-home.php
-	should be logged in to view
+home.php ---> For ease of use with toolkit. This should be placed in the source directory. 
+	should be logged in to view   --- Check
 	show most recent status report
 	show account name and recovery email
 	show options to change revocery email and password
@@ -23,6 +23,6 @@ region.php
 	generic map page with data points on it, along with option to view specific time from --/--/-- to --/--/--
 	by default show last 7 days
 
-status.php
+status.php  ---> For ease of use with login toolkit, This should be located in the soure directory
 	logged in user can submit status
 	show list of previously submitted statuses with option to delete them
