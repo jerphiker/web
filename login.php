@@ -10,26 +10,16 @@ if(isset($_POST['submitted']))
 }
 
 ?>
-
-<!DOCTYPE html>
-
-<html>
-
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en-US" lang="en-US">
 <head>
       <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
       <title>Login</title>
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
       <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
-
 </head>
-
 <body>
-<?php
-	include './includes/header.php';
 
-	include './includes/menu.php';
-?>
-<div id="login Area">
 <!-- Form Code Start -->
 <div id='fg_membersite'>
 <form id='login' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
@@ -79,48 +69,5 @@ Uses the excellent form validation script from JavaScript-coder.com-->
 Form Code End (see html-form-guide.com for more info.)
 -->
 
-
-<!-- 	<a href="./source/login.php">Login</a><br />
- -->	<a href="./register.php">Register New User</a>
-
- </div>
-
-
-<div id="left_side_forms">
-	<p>
-	This needs multiple forms: optional login, forgot password, and create new account.<br /><br />
-
-	Login should be processed and direct user to an incorrect login if unsuccessful or to 
-	the home page if login is successful.<br /><br />
-
-	Forgot password should be processed and direct user to an account found - email sent
-	page if email submitted matches a row in the users table, or to an account not found
-	page if email submitted was not found. An email should be sent containing the user 
-	password and user name to the email address associated with the account if a row 
-	is found in the users table with the email address submitted.<br /><br />
-
-	Create new account should be processed and add a row to the users table if an account 
-	with the associated email and username does not already exist, or it should take the 
-	user to an account creation unsuccessful page if the associated email or username already 
-	exists in the users table.<br /><br />
-
-	Account creation should not be necessary to submit an illness or to navigate the site.<br />
-
-	Account information that is needed to create a new account is username, gender, birthday, 
-	password, and a recovery email.
-	Of these, only username and password should be required.
-	</p>
-</div>
-
-<div id="index_map">
-	<p>
-	This is for the google map on the home page, with every point shown, specific to the 
-	region the ip address comes from.
-	</p>
-</div>
-
-<?php
-	include './includes/footer.php';
-?>
 </body>
 </html>
