@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC76EzojTtv7nTnUmbJnZkEbJ2_K7Rkj84&sensor=true">
+    </script>
+	
+	<script type="text/javascript">
+	var map
+	var mapOptions
+	
+	function load() {
+		
+		mapOptions = {
+			center: new google.maps.LatLng(39.742199, -105.224338),
+			zoom: 17,
+			mapTypeId: google.maps.MapTypeId.ROADMAP
+		};
+		map = new google.maps.Map(document.getElementById("map-canvas"),mapOptions); 
+		
+		//change this to name of xml generator
+		downloadUrl("xmlgen.php temp", function(data) {
+			var xml = data.responseXML;
+			var markers = xml.documentElement.getElementbyTagName("marker");
+			for (var i = 0; i < markers.length; i++) {
+				var ill = markers[i].getAttribute("ill");
+				var lat = markers[i].getAttribute("lat");
+				var lng = markers[i].getAttribute("lng");
+				var marker = new google.maps.Marker({
+					map: map,
+					position: new google.maps.LatLng(lat, lng)
+				});
+			}
+		});
+	}
+			
+function downloadUrl(url, callback) {
+    var request = window.ActiveXObject ?
+        new ActiveXObject('Microsoft.XMLHTTP') :
+        new XMLHttpRequest;
+
+    request.onreadystatechange = function() {
+        if (request.readyState == 4) {
+			request.onreadystatechange = doNothing;
+			callback(request, request.status);
+        }
+    };
+
+    request.open('GET', url, true);
+    request.send(null);
+}
+
+    function doNothing() {}
+
+    
+
+  </script>
+
+  </head>
+
+  <body onload="load()">
+    <div id="map-canvas" style="width: 500px; height: 300px"></div>
+  </body>
+
+</html>			
+			
+			
+			
+			

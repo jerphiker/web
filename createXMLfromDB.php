@@ -39,7 +39,7 @@ while ($row = @mysql_fetch_assoc($result)) {
 	//add the new node to the xml document
 	$node = $dom->createElement("marker");
 	$newnode = $parnode->appendChild($node);
-	$newnode->setAttribute("type", $row['type']);
+	$newnode->setAttribute("ill", $row['ill']);
 	$newnode->setAttribute("lat", $row['lat']);
 	$newnode->setAttribute("lng", $row['lng']);
 }
