@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+    <style type="text/css">
+      html { height: 75%; width: 75% }
+      body { height: 100%; margin: 0; padding: 0 }
+      #map-canvas { height: 100% }
+    </style>
+    <script type="text/javascript"
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC76EzojTtv7nTnUmbJnZkEbJ2_K7Rkj84&sensor=true">
+    </script>
+	
+	<script type="text/javascript">
+		function setMapOptions(location) {
+			var mapOptions;
+			if (location == "mines_park") {
+				mapOptions = {
+					center: new google.maps.LatLng(39.742199, -105.224338),
+					zoom: 17,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+			}
+			else if (location == "campus") {
+				mapOptions = {
+					center: new google.maps.LatLng(39.750325, -105.221046),
+					zoom: 17,
+					mapTypeId: google.maps.MapTypeId.ROADMAP
+				};
+			}
+			return mapOptions;
+		}
+			
+	</script>
+	
+    <script type="text/javascript">
+      function initialize() {
+		var mines_park_lat = 39.742199;
+		var mines_park_lng = -105.224338;
+		var marker
+		var map
+		var mapOptions
+
+        //var mapOptions = {
+        //  center: new google.maps.LatLng(39.750325, -105.221046),
+        //  zoom: 17,
+        //  mapTypeId: google.maps.MapTypeId.ROADMAP
+        //};
+		
+		mapOptions = setMapOptions("campus");
+		
+        map = new google.maps.Map(document.getElementById("map-canvas"),
+            mapOptions);
+			
+		marker = new google.maps.Marker({
+			map:map,
+			draggable:true,
+			animation: google.maps.Animation.DROP,
+			position: new google.maps.LatLng(39.750325, -105.221046)
+		});
+		marker.setAnimation(google.maps.Animation.BOUNCE);
+      }
+	  
+		
+      google.maps.event.addDomListener(window, 'load', initialize);
+    </script>
+  </head>
+<body>
+	<!--// where the map actually goes. integrate it into correct spot--> 
+	<div id="map-canvas"/>
+</body>
+</html>
+
+<!--
+// if location == campus
+	// set map start loc mines
+// elif location  == mines park
+	// set map start mines park
+// else 
+	// set map location to zoomed out golden
+
+// 'drop' a marker at center of initial location. 
+// prompt user drag marker to the location they live
+// update location coords for adding to DB
+// sexy bounce animations
+// change icon to sexy needle
+
+marker = new google.maps.Marker({
+			map:map,
+			draggable:true,
+			animation: google.maps.Animation.DROP,
+			position: new google.maps.LatLng(39.750325, -105.221046)
+		});
+		marker.setAnimation(google.maps.Animation.BOUNCE);
+	  
+	  // createt he map on page load
+      google.maps.event.addDomListener(window, 'load', initialize);
+
+function dropMarker(location_string)
+{
+	alert("drop Marker called");
+	if (location_string == "campus") {
+		alert("campus")
+	}
+	else if (location_string == "mines park") {
+		alert("mines park")
+	}
+	else {
+		alert("elsewhere in golden")
+	}
+}	  
+	  
+
+-->
