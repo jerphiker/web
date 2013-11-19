@@ -1,3 +1,14 @@
+<?PHP
+require_once("./include/membersite_config.php");
+
+if(!$fgmembersite->CheckLogin())
+{
+    $fgmembersite->RedirectToURL("index.php");
+    exit;
+}
+
+?>
+
 <!DOCTYPE html>
 
 <html>
@@ -10,8 +21,11 @@
 <?php
 	include './includes/header.php';
 
-	include './includes/menu.php';
+	include './include/menu.php';
 ?>
+
+Welcome back <?= $fgmembersite->UserFullName(); ?>!
+
 
 <p>
 This page needs to display username, password, and recovery email (*possibly age and gender, if that information is collected for accounts, so people with accounts don't need to enter it every time.*)

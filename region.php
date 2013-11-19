@@ -30,7 +30,7 @@
 <?php
 	include './includes/header.php';
 
-	include './includes/menu.php';
+	include './include/menu.php';
 ?>
 
 <p>

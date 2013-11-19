@@ -3,7 +3,7 @@ require_once("./include/membersite_config.php");
 
 if(!$fgmembersite->CheckLogin())
 {
-    $fgmembersite->RedirectToURL("login.php");
+    $fgmembersite->RedirectToURL("index.php");
     exit;
 }
 
@@ -23,15 +23,15 @@ if(!$fgmembersite->CheckLogin())
 <?php
 	include './includes/header.php';
 
-	include './includes/menu.php';
+	include './include/menu.php';
 ?>
 
 <div> 
 	<h2>Home Page</h2>
 	Welcome back <?= $fgmembersite->UserFullName(); ?>!
-	<p><a href='source/change-pwd.php'>Change password</a></p>
+	<p><a href='./change-pwd.php'>Change password</a></p>
 
-	<p><a href='source/logout.php'>Logout</a></p>
+	<p><a href='./logout.php'>Logout</a></p>
 </div>
 
 <!-- <div id="left_info">

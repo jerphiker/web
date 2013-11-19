@@ -3,7 +3,7 @@ require_once("./include/membersite_config.php");
 
 if(!$fgmembersite->CheckLogin())
 {
-    $fgmembersite->RedirectToURL("login.php");
+    $fgmembersite->RedirectToURL("index.php");
     exit;
 }
 
@@ -20,7 +20,7 @@ if(!$fgmembersite->CheckLogin())
 <?php
 	include './includes/header.php';
 
-	include './includes/menu.php';
+	include './include/menu.php';
 ?>
 
 

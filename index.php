@@ -27,7 +27,7 @@ if(isset($_POST['submitted']))
 <?php
 	include './includes/header.php';
 
-	include './includes/menu.php';
+	include './include/menu.php';
 ?>
 <div id="login Area">
 <!-- Form Code Start -->
