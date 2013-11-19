@@ -1,15 +1,15 @@
 Info to collect:
-Check	cold/flu
-Check	location (float latitude, float longitude)
-Later	date (automatic)
+	cold/flu
+	location (float latitude, float longitude)
+	date (automatic)
 
 index.php
-Check	login functionality (forgot pw)  --- Check
-Check	create account  --- Check
+	login functionality (forgot pw)  --- Check
+	create account  --- Check
 	submit status anonymously
 
 home.php ---> For ease of use with toolkit. This should be placed in the source directory. 
-Check	should be logged in to view   --- Check
+	should be logged in to view   --- Check
 	show most recent status report
 	show account name and recovery email
 	show options to change revocery email and password
