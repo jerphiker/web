@@ -13,6 +13,7 @@ if(!$fgmembersite->CheckLogin())
 <head>
       <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
       <title>Home page</title>
+      <link rel="stylesheet" type="text/css" href="style/main.css">
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css">
 </head>
 <body>
@@ -29,7 +30,7 @@ if(!$fgmembersite->CheckLogin())
 Welcome back <?= $fgmembersite->UserFullName(); ?>!
 
 
-<p><a href='access-controlled.php'>A sample 'members-only' page</a></p>
+<!-- <p><a href='access-controlled.php'>A sample 'members-only' page</a></p>
 
 <div id="left_info">
 	<p>
@@ -44,6 +45,8 @@ Welcome back <?= $fgmembersite->UserFullName(); ?>!
 
 <br><br><br>
 <p><a href='logout.php'>Logout</a></p>
+ -->
 </div>
+
 </body>
 </html>

@@ -87,7 +87,7 @@ Form Code End (see html-form-guide.com for more info.)
 </div>
 
 
-<div id="left_side_forms">
+<!-- <div id="left_side_forms">
 	<p>
 	This needs multiple forms: optional login, forgot password, and create new account.<br /><br />
 
@@ -118,7 +118,7 @@ Form Code End (see html-form-guide.com for more info.)
 	This is for the google map on the home page, with every point shown, specific to the 
 	region the ip address comes from.
 	</p>
-</div>
+</div> -->
 
 <?php
 	include './includes/footer.php';

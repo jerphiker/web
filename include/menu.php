@@ -19,7 +19,7 @@ if(!$fgmembersite->CheckLogin()) {?>
 <?} else {?>
 
 <ul id="menu-bar">
-	<li class="active"><a href="./home.php">Home</a></li>
+	<li class="active"><a href="./login-home.php">Home</a></li>
 	<li><a href="./region.php">Region</a></li>
 	<li><a href="./status.php">Status</a></li>
 	<li><a href="./account.php">Account</a></li>
