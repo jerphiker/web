@@ -1,0 +1,16 @@
+body {
+	margin: 0;
+	padding: 0;
+	background-color: #ffffd0;
+
+}
+
+#newUserLink {
+	float: right;
+}
+
+#loginArea {
+	padding: 20px;
+	float: right;
+	width: auto;
+}

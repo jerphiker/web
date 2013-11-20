@@ -19,6 +19,7 @@ if(isset($_POST['submitted']))
       <meta http-equiv='Content-Type' content='text/html; charset=utf-8'/>
       <title>Login</title>
       <link rel="STYLESHEET" type="text/css" href="style/fg_membersite.css" />
+      <link rel="stylesheet" type="text/css" href="style/main.css">
       <script type='text/javascript' src='scripts/gen_validatorv31.js'></script>
 
 </head>
@@ -29,7 +30,7 @@ if(isset($_POST['submitted']))
 
 	include './include/menu.php';
 ?>
-<div id="login Area">
+<div id="loginArea">
 <!-- Form Code Start -->
 <div id='fg_membersite'>
 <form id='login' action='<?php echo $fgmembersite->GetSelfScript(); ?>' method='post' accept-charset='UTF-8'>
@@ -74,16 +75,16 @@ Uses the excellent form validation script from JavaScript-coder.com-->
 
 // ]]>
 </script>
+
+
 </div>
 <!--
 Form Code End (see html-form-guide.com for more info.)
 -->
-
-
-<!-- 	<a href="./source/login.php">Login</a><br />
- -->	<a href="./register.php">Register New User</a>
-
- </div>
+<div id="newUserLink">
+	<a href="./register.php">Register New User</a>
+</div>
+</div>
 
 
 <div id="left_side_forms">

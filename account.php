@@ -25,6 +25,18 @@ if(!$fgmembersite->CheckLogin())
 ?>
 
 Welcome back <?= $fgmembersite->UserFullName(); ?>!
+<table>
+	<tr>
+		<td>
+			Your Email Address:
+		</td>
+		<td>
+			<?= $fgmembersite->UserEmail(); ?>
+		</td>
+	</tr>
+</table>
+
+<p><a href='change-pwd.php'>Change password</a></p>
 
 
 <p>
